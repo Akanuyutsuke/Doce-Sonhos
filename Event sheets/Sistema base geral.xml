@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Sistema base geral</name>
+    <events>
+        <event-group description="" sid="563078221852319" title="sistema">
+            <sub-events>
+                <event-block sid="685282529935751">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="222312637539056" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="685773277460565" type="Player">
+                            <param id="0" name="Pin to">Sombra</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="508114605793799" type="TelaInicial">
+                            <param id="0" name="Pin to">pause</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="875554677181619" type="VoltarAoJogo">
+                            <param id="0" name="Pin to">pause</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="699036659306470" type="Configurações">
+                            <param id="0" name="Pin to">pause</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="579616447212773" type="fundoEscuro">
+                            <param id="0" name="Pin to">pause</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Set position" sid="337847254043093" type="escuridao">
+                            <param id="0" name="X">432.035</param>
+                            <param id="1" name="Y">240</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="647404249949083">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="571935598870903" type="Sombra">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">374</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="513647767477020" type="Sombra">
+                            <param id="0" name="Y">374</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="651052974085435">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="298024172508603" type="Sombra">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">319</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="911419151138902" type="Sombra">
+                            <param id="0" name="Y">319</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="868885028239656" title="Movimentação">
+            <sub-events>
+                <event-block sid="608954985888120">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="182382442640955" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="876159481478427" type="Sombra">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="594705249423142" type="Player">
+                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="346417682294033" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="821406034884235">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="434022820707419" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="596796190097846" type="Player">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="751512183806196">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="656342862279367" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="564328107534539" type="Sombra">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="201232217746906" type="Player">
+                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="713691799482848" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="776703276950992">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="543967169187739" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="577438566512841" type="Player">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="373768670724365">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="529147955357913" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="429078889966579" type="Sombra">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="214758118306760" type="Player">
+                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="698358740272928">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="277641988458826" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="514962128832243" type="Player">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="509921060737245">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="193099916631256" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="771129982924612" type="Sombra">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="666166576909241" type="Player">
+                            <param id="0" name="Animation">&quot;walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="316664327067041">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="198980616981541" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="315522212063951" type="Player">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="179839291074359" title="Pulo">
+            <sub-events>
+                <event-block sid="683565979680882">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="118738053208080" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="514473725207680" type="Player">
+                            <param id="0" name="Instance variable">NoAr</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="159451795166392" type="Player" />
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="199788711783730" type="Player">
+                            <param id="0" name="Vector Y">-300</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="885156104748376" type="Player">
+                            <param id="0" name="Instance variable">NoAr</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="124113199694342">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="885671825201754" type="Player">
+                            <param id="0" name="Instance variable">NoAr</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="860975928177946" type="Sombra">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="140149557880290">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="107984366349332" type="Player">
+                            <param id="0" name="Object">Sombra</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="597381636979179" type="Player">
+                            <param id="0" name="Instance variable">NoAr</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="435788243697407" type="Sombra">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="909001427673379" type="Player">
+                            <param id="0" name="Object">Sombra</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="791915810147403" type="Player">
+                            <param id="0" name="Pin to">Sombra</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="762472230480175">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="754436733495649" type="Player">
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="X co-ordinate">Sombra.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="364178007613349" type="Player">
+                            <param id="0" name="X">Sombra.X</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="258010467660450" title="sistema de portas">
+            <sub-events>
+                <event-block sid="479670223441949">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="487258154733283" type="Sombra">
+                            <param id="0" name="Object">colisor1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="985513254661824" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="681218982404529" type="Porta">
+                            <param id="0" name="Object">Sprite</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="981176099071209">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="828029406353026" type="Sombra">
+                            <param id="0" name="Object">colisor1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="705680407296477" type="Sprite" />
+                    </actions>
+                </event-block>
+                <event-block sid="541479454622120">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="523260599191373" type="Keyboard">
+                            <param id="0" name="Key">69</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="906021463909636" type="Sombra">
+                            <param id="0" name="Object">colisor1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="860640664259355" type="System">
+                            <param id="0" name="Layout">Corredor</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="917302933284030" title="pause">
+            <sub-events>
+                <event-block sid="326644097205058">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="440249223471009" type="Keyboard">
+                            <param id="0" name="Key">27</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="189339093234673" type="Player">
+                            <param id="0" name="Instance variable">pause</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="815005435530184">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="389511460054062" type="Player">
+                            <param id="0" name="Instance variable">pause</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="226903053850508" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Set object time scale" sid="479019803435499" type="System">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Time scale">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="937872616788900" type="pause">
+                            <param id="0" name="X">360</param>
+                            <param id="1" name="Y">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="587387782795703">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="894595805711260" type="Player">
+                            <param id="0" name="Instance variable">pause</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Set object time scale" sid="971439122090228" type="System">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Time scale">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="248547616739207" type="pause">
+                            <param id="0" name="X">-560</param>
+                            <param id="1" name="Y">-472</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="799858928550840" title="Iluminação lanterna">
+            <sub-events>
+                <event-block sid="607405208434137">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="902236696504330" type="Keyboard">
+                            <param id="0" name="Key">82</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="215162234087451" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="433020336384280" type="Player">
+                            <param id="0" name="Object">Luz</param>
+                            <param id="1" name="Layer">&quot;iluminação&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="414068721510514">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="483522535538977" type="Sombra">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">360</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-24" name="Move to top" sid="205300897282366" type="Sombra" />
+                <action id="-29" name="Move to object" sid="930880382694004" type="Player">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">Sombra</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="571994273853856">
+            <conditions>
+                <condition id="0" name="On clicked" sid="364395927758357" type="VoltarAoJogo" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="814769070561196">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="497633961817145" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">SpriteOK</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-14" name="Set object time scale" sid="320269784633886" type="System">
+                    <param id="0" name="Object">Player</param>
+                    <param id="1" name="Time scale">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="941803748500906" type="pause">
+                    <param id="0" name="X">-560</param>
+                    <param id="1" name="Y">-472</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="555663809525013">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="832380552210281" type="Mouse">
+                    <param id="0" name="Object">SpriteOK</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="133472161145300" type="SpriteOK">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="760897323400730">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="755519326642428" type="Mouse">
+                    <param id="0" name="Object">SpriteOK</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="578435799313866" type="SpriteOK">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
